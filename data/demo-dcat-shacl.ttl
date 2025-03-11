@@ -1,0 +1,47 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+<http://example.org/shapes/CatalogShape> a sh:NodeShape ;
+    sh:targetClass dcat:Catalog ;
+    sh:property [
+        sh:path dcat:title ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path dcat:description ;
+        sh:datatype xsd:string ;
+    ] .
+
+<http://example.org/shapes/DatasetShape> a sh:NodeShape ;
+    sh:targetClass dcat:Dataset ;
+    sh:property [
+        sh:path dcat:title ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path dcat:publisher ;
+        sh:datatype xsd:string ;
+    ] .
+
+<http://example.org/shapes/DistributionShape> a sh:NodeShape ;
+    sh:targetClass dcat:Distribution ;
+    sh:property [
+        sh:path dcat:accessURL ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path dcat:format ;
+        sh:datatype xsd:string ;
+    ] .
+
+<http://example.org/shapes/ServiceShape> a sh:NodeShape ;
+    sh:targetClass dcat:Service ;
+    sh:property [
+        sh:path dcat:title ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path dcat:endpointURL ;
+        sh:datatype xsd:string ;
+    ] .
+    
